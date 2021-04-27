@@ -5,7 +5,7 @@ La funzione ritornerà un nuovo array con i valori che hanno la posizione compre
 degli array foreach(return value) o filter(return arr).*/
 
 
-var numbers =[25, 34, 71, 45, 6, 8, 20];
+var numbers =[25, 34, 71, 45, 6, 8, 20];                       
 console.log(numbers)
 var min = parseInt(prompt("inserisci index d'inizio"));
 var max = parseInt(prompt("inserisci index finale"));
@@ -14,17 +14,14 @@ var filteredNo;
 var filteredNo = filterIndex(min, max, numbers);
 console.log(filteredNo)
 
-
 function filterIndex(a, b, array){
-    result = [];
-
-    numbers.forEach(function(element, index) {
+    result = [];                                    //array risultato
+    numbers.forEach(function(element, index) {      //per ogni elemento prendi index
         
-        if(index >= a && index <= b){
-            result.push(element);
+        if(index >= a && index <= b){                 //condizione per pushare in "result"
+            result.push(element);                     
         }
     });
-    return result
-
+    return result                                      //array filtrato
 }
 
