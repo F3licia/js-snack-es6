@@ -4,7 +4,6 @@
 
   var bikes = [
   {nome:"Graziella", weight:13},
-  {nome:"Bh", weight:3},
   {nome:"Bhoss", weight:11},
   {nome:"Trek", weight:9},
   {nome:"Kona", weight:10},
