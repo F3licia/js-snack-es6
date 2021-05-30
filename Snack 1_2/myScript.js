@@ -4,6 +4,7 @@
 
   var bikes = [
   {nome:"Graziella", weight:13},
+  {nome:"Bh", weight:3},
   {nome:"Bhoss", weight:11},
   {nome:"Trek", weight:9},
   {nome:"Kona", weight:10},
@@ -11,25 +12,19 @@
 
   /*Stampare a schermo la bici con peso minore utilizzando destructuring e template literal*/
 
-  var lighter
+  let lightest = bikes[0];
 
-  for(var i = 0; i < bikes.length; i++){  //confronto il peso delle bici
 
-      if((bikes[0].weight < bikes[1].weight) && (bikes[0].weight < bikes[2].weight) && (bikes[0].weight < bikes[3].weight)){
-        lighter = bikes[0];
-
-      } else if ((bikes[1].weight < bikes[0].weight) && (bikes[1].weight < bikes[2].weight) && (bikes[1].weight < bikes[3].weight)){
-        lighter = bikes[1];
-
-      }else if ((bikes[2].weight < bikes[1].weight) && (bikes[2].weight < bikes[0].weight) && (bikes[2].weight < bikes[3].weight)){
-        lighter = bikes[2];
-
-      }else if ((bikes[3].weight < bikes[1].weight) && (bikes[3].weight < bikes[2].weight) && (bikes[3].weight < bikes[0].weight)){
-        lighter = bikes[3];
-      }
+  for (let i=0; i< bikes.length; i++ ){
+    
+  
+    if(bikes[i].weight < lightest.weight){
+      lightest = (bikes[i])
+    }
+      
   }
-
-  var {nome, weight} = lighter; //nome e peso della bici più leggera
+  
+  var {nome, weight} = lightest; //nome e peso della bici più leggera
   console.log(`La bicicletta col peso minore è ${nome} con un peso di ${weight} kg`)
 
 
